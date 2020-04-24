@@ -1,4 +1,4 @@
-module golangcustomtype
+module emailstruct
 
 go 1.13
 
