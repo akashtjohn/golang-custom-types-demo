@@ -39,7 +39,8 @@ func (em *Email) MarshalJSON() ([]byte, error) {
 	if !em.Valid {
 		return []byte("null"), nil
 	}
-	return json.Marshal(em.String())
+	byteString, err := json.Marshal(em.String())
+	return byteString, err
 }
 
 // UnmarshalJSON method for Email
@@ -161,5 +162,5 @@ func main() {
 
 	fmt.Print("running")
 	testJSON()
-	testSQL()
+	//testSQL()
 }
